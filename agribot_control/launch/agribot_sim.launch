@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Show in Rviz   -->
+  <include file="$(find-pkg-share agribot_gazebo)/launch/agribot_farm.launch">
+  </include>
+
+  <!-- Include ros_control launch file to load joint position controllers -->
+  <include file="$(find-pkg-share agribot_control)/launch/agribot_control.launch" />
+  <include file="$(find-pkg-share agribot_joystick)/launch/agribot_joystick.launch" />
+</launch>

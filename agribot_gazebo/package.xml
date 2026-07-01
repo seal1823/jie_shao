@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypesxsd="1"?>
+<package format="3">
+  <name>agribot_gazebo</name>
+  <version>0.1.0</version>
+  <description>pioneer_gazebo</description>
+  <maintainer email="alireza.ahmadi@uni-bonn.de">Alireza Ahmadi</maintainer>
+  <license>BSD</license>
+  <author email="alireza.ahmadi@uni-bonn.de">Alireza Ahmadi</author>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>agribot_description</exec_depend>
+  <exec_depend>agribot_control</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

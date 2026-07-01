@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypesxsd="1"?>
+<package format="3">
+  <name>agribot_launch</name>
+  <version>0.0.0</version>
+  <description>The agribot_launch package</description>
+  <maintainer email="alphabot@todo.todo">alphabot</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

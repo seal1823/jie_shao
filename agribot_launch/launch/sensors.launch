@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Run imu via rosserial -->
+  <include file="$(find-pkg-share agribot_launch)/launch/imu.launch"/>
+
+  <!--gps-->
+  <include file="$(find-pkg-share agribot_launch)/launch/gps.launch"/>
+
+</launch>

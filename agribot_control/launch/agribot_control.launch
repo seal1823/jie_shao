@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" exec="spawner" respawn="false" output="screen" ns="/agribot" args="
+    joint_state_controller
+    left_caster_joint
+    right_caster_joint "/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher"
+  respawn="false" output="screen">
+    <remap from="/joint_states" to="/agribot/joint_states" />
+  </node>
+</launch>

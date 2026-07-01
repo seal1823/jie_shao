@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="real_time_update_rate" default="true"/>
+
+  <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
+    <arg name="world" value="$(find-pkg-share agribot_gazebo)/worlds/blank.world"/>
+    <arg name="debug" value="$(var debug)" />
+    <arg name="gui" value="$(var gui)" />
+    <arg name="paused" value="$(var paused)"/>
+  </include>
+
+  <!-- Publish robot description -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher" output="screen">
+    <param name="robot_description" value='$(command "$(find-exec xacro) $(find-pkg-share agribot_control)/urdf/agribot.xacro")'/>
+  </node>
+
+  <!-- Spawn robot in Gazebo -->
+  <node name="agribot_spawn" pkg="gazebo_ros" exec="spawn_entity.py" output="screen" respawn="false"
+   args="-x -6.0 -y 0 -z 1.13 -Y 0 -topic robot_description -entity agribot"/>
+</launch>

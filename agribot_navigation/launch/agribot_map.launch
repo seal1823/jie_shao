@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+ <arg name="map_file" default="$(find-pkg-share agribot_navigation)/maps/map.yaml"/>
+
+ <!--- Run map_server -->
+ <node name="map_server" pkg="nav2_map_server" exec="map_server" args="$(var map_file)"/>
+</launch>

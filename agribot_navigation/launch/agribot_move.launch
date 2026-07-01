@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find-pkg-share nav2_bringup)/launch/navigation_launch.py">
+    <arg name="params_file" value="/home/zrh/agribot/install/agribot_navigation/share/agribot_navigation/params/nav2_params.yaml"/>
+    <arg name="use_sim_time" value="false"/>
+    <arg name="autostart" value="true"/>
+  </include>
+</launch>

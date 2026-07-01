@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find-pkg-share agribot_navigation)/launch/agribot_map.launch"/>
+  <include file="$(find-pkg-share agribot_navigation)/launch/agribot_move.launch.py"/>
+</launch>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- send fake joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" exec="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node>
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher">
+    <param name="robot_description" value='$(command "$(find-exec xacro) $(find-pkg-share agribot_control)/urdf/agribot.xacro")'/>
+  </node>
+
+  <!-- Show in Rviz   -->
+  <node name="rviz2" pkg="rviz2" exec="rviz2"/>
+</launch>

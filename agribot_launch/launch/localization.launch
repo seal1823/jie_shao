@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="rviz2" name="rviz2" exec="rviz2"/>
+
+  <include file="$(find-pkg-share rosbag_change)/launch/rosbag_change.launch"/>
+  <include file="$(find-pkg-share agribot_localization)/launch/localization.launch"/>
+</launch>

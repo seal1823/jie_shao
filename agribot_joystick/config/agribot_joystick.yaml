@@ -1,0 +1,13 @@
+agribot_joystick:
+  ros__parameters:
+    Tur_lin_scale: 0.7
+    Tur_ang_scale: 0.5
+    lin_scale: 0.3
+    ang_scale: 0.4
+    srv_scale: 90.0
+    axis_linear: 1
+    axis_angular: 2
+    axis_servo: 0
+    axis_deadman: 5
+    axis_turbo: 4
+    axis_stop: 7

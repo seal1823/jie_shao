@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find-pkg-share agribot_gazebo)/launch/agribot_farm.launch"/>
+  <include file="$(find-pkg-share agribot_navigation)/launch/agribot_navigation.launch"/>
+
+</launch>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--Motor driver -->
+  <include file="$(find-pkg-share md49_base_controller)/launch/md49_base_controller_local.launch"/>
+
+  <!-- Run joystick_node -->
+  <include file="$(find-pkg-share agribot_joystick)/launch/agribot_joystick.launch"/>
+
+</launch>

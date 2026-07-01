@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="rosserial_python" exec="serial_node" name="agribot_imu">
+    <param name="port" value="/dev/imu"/>
+    <param name="baud" value="57600"/>
+  </node>
+</launch>
